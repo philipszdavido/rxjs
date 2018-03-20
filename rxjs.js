@@ -13,47 +13,16 @@
  * })
  */
 
-const EventEmitter = require('events')
-class _Emitter extends EventEmitter {}
-
-const __Emitter = new _Emitter()
-
 class AsyncSubject {}
 class ReplaySubject {}
 class PublishSubject {}
 
 class Observer {
 
-    constructor() {
-        this.stream = []
-        this.subscribers = []
-        this.fn = null
-        class _Emitter extends EventEmitter {}
-        const __Emitter = new _Emitter()
-        this._emitter = __Emitter
-        this._emitter.on('start', function() {
-
-        })
-    }
-
     /** push values to stream */
-    next(v) {
-        this.stream.push(v)
-    }
-
-    onError(v) {
-
-    }
-
-    onCompleted(v) {
-
-    }
-    flushStream() {
-        this.stream = []
-    }
-    startEmit() {
-        this._emitter.emit('start')
-    }
+    next() {}
+    error() {}
+    complete() {}
 }
 
 class Observable {
@@ -61,15 +30,12 @@ class Observable {
     constructor(fn) {
         this._subscribe = fn
     }
+
     static create(fn) {
         return new Observable(fn)
     }
+
     _subscribe() {}
-    static interval() {}
-    static range() {}
-    static distinct() {}
-    map() {}
-    filter() {}
 
     /**
      * .subscribe({
@@ -112,26 +78,6 @@ class BehaviorSubject extends Subject {
     }
 }
 
-/*let source = Observable.create(function(observer) {
-    //console.log('Hello')
-    observer.next(9)
-    observer.next(90)
-    observer.next(900)
-    setTimeout(() => {
-        observer.next(10)
-            //console.log('timeout', observer)
-    }, 1000)
-})
-
-source.subscribe({
-    next: x => console.log(x)
-})
-
-source.subscribe({
-    next: x => console.log(`Hello: ${x}`)
-})
-console.log('end')
-*/
 exports.Observable = Observable
 exports.Subject = Subject
 exports.BehaviorSubject = BehaviorSubject
