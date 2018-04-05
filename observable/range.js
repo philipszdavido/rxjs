@@ -7,6 +7,10 @@ Observable.range = function(s, f) {
     if (f < s) {
         throw new Error('unaccepted range of numbers')
     }
+    if (!f) {
+        f = s
+        s = 0
+    }
     return new Observable((_obs) => {
         while (s <= f) {
             _obs.next(s)

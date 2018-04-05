@@ -1,7 +1,26 @@
 let { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
 require('./observable/from')
 require('./observable/of')
+require('./observable/range')
+require('./observable/interval')
+require('./operators/filter')
+require('./operators/map')
 
+let _arr = Observable.range(0, 8).map((r) => {
+    return 2 * r
+})
+_arr.subscribe({
+    next: x => console.log(x)
+})
+
+return
+let __arr = Observable.interval(300)
+__arr.subscribe({
+    next: x => console.log(x)
+})
+
+
+return
 /** */
 var subject = new BehaviorSubject(0); // 0 is the initial value
 subject.subscribe({
