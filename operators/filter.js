@@ -42,7 +42,7 @@ class FilterSubscriber extends Subscriber {
         this.count = 0;
     }
 
-    _next(value) {
+    next(value) {
         var result;
         try {
             result = this.predicate.call(this.thisArg, value, this.count++);

@@ -8,8 +8,8 @@ require('./operators/map')*/
 
 let { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
 
-let _arr = Observable.range(0, 8).filter((r) => {
-    return 2 * r
+let _arr = Observable.range(0, 8).map((r) => {
+    return r * 2
 })
 _arr.subscribe({
     next: x => console.log(x)
