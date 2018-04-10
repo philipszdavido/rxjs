@@ -1,6 +1,6 @@
 "use strict";
 
-let { Observable } = require('../rxjs');
+const Observable = require('./../Observable');
 
 Observable.prototype.map = function(_fn) {
     const source = this;

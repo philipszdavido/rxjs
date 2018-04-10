@@ -1,5 +1,5 @@
 "use strict";
-let { Observable } = require('../rxjs');
+let Observable = require('./../Observable');
 //var from_1 = require('../../observable/from');
 Observable.from = function(params) {
     return new Observable((_obs) => {

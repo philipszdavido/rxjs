@@ -1,5 +1,5 @@
 "use strict";
-let { Observable } = require('../rxjs');
+let Observable = require('./../Observable');
 Observable.interval = function(_time) {
     if (typeof _time != 'number') {
         throw new Error('invalid argument')

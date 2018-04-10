@@ -1,12 +1,14 @@
-let { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
+/*let { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
 require('./observable/from')
 require('./observable/of')
 require('./observable/range')
 require('./observable/interval')
 require('./operators/filter')
-require('./operators/map')
+require('./operators/map')*/
 
-let _arr = Observable.range(0, 8).map((r) => {
+let { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
+
+let _arr = Observable.range(0, 8).filter((r) => {
     return 2 * r
 })
 _arr.subscribe({

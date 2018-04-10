@@ -1,0 +1,21 @@
+{
+    "name": "rxjs",
+    "version": "1.0.0",
+    "description": "This is my own implentation of the [RxJS library (Reactive Extensions for JavaScript)](https://github.com/ReactiveX/rxjs).",
+    "main": "index.js",
+    "scripts": {
+        "push": "bash ./scripts/push.sh",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/philipszdavido/rxjs.git"
+    },
+    "keywords": [],
+    "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/philipszdavido/rxjs/issues"
+    },
+    "homepage": "https://github.com/philipszdavido/rxjs#readme"
+}

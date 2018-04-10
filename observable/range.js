@@ -1,5 +1,5 @@
 "use strict";
-let { Observable } = require('../rxjs');
+let Observable = require('./../Observable');
 Observable.range = function(s, f) {
     if (typeof s != 'number' && typeof f != 'number') {
         throw new Error('range only accepts numbers')
