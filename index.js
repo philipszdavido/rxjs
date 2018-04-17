@@ -1,12 +1,4 @@
-/*let { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
-require('./observable/from')
-require('./observable/of')
-require('./observable/range')
-require('./observable/interval')
-require('./operators/filter')
-require('./operators/map')*/
-
-let { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
+const { Observable, Subject, BehaviorSubject } = require('./rxjs.js')
 
 let _arr = Observable.range(0, 8).map((r) => {
     return r * 2

@@ -1,9 +1,9 @@
-class Observer {
-    constructor() {}
+'use strict';
+const Observer = {
 
     /** push values to stream */
-    next() {}
-    error() {}
-    complete() {}
+    next: function() {},
+    error: function() {},
+    complete: function() {}
 }
 module.exports = Observer

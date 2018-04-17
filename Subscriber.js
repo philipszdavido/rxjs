@@ -1,9 +1,16 @@
-const Observer = require('./Observer')
+'use strict'
 
-class Subscriber extends Observer {
+const Observer = require('./Observer')
+const Subscription = require('./Subscription')
+
+class Subscriber extends Subscription /*implements Observer*/ {
     constructor(obs, error, complete) {
         super()
-        this.destination = obs
+        if (typeof obs == 'function') {
+            this.next = obs
+        } else {
+            this.destination = obs            
+        }
     }
     next(v) {
         this.destination.next(v)
