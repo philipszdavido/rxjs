@@ -76,6 +76,14 @@ let b= a.concat([{id:80}])
 
 // log(a[0] === b[0])
 
+/**
+    The IterableChanges interface allows us to iterate over the changes in different ways, for instance:
+
+    Iterate over the added items.
+    Iterate over the removed items.
+    Iterate over the items which have changed their position.
+    Iterate over all the changes.
+ */
 class Differ {
   constructor() {
     this._items = null
